@@ -6,7 +6,6 @@
 <title>Kushal Dhoot | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
@@ -21,7 +20,17 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -31,14 +40,14 @@
     <div class="hero-tag"><span>// </span>B.Tech CSE · AI/ML · GITAM University · 2024–2028</div>
     <h1 class="hero-name" data-text="KUSHAL DHOOT">KUSHAL <span class="accent">DHOOT</span></h1>
     <div class="typewriter-wrap"><span class="prefix">&gt; </span><span id="typewriter"></span><span class="blink">_</span></div>
-    <p class="hero-desc">Building intelligent systems, games, and tools from scratch. From AI-powered desktop assistants to cyberpunk Python games — I ship things that matter.</p>
+    <p class="hero-desc">I build stuff to make something new/cool and also to learn new things Sunday AI for windows is under my main project right now.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Projects</a>
       <a href="#contact" class="btn-sec">Contact Me</a>
     </div>
   </div>
   <div class="hero-stats">
-    <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Projects</span></div>
+    <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Projects</span></div>
     <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Languages</span></div>
     <div class="stat"><span class="stat-num">2024</span><span class="stat-label">Since</span></div>
   </div>
@@ -63,18 +72,15 @@
         <div class="info-item"><div class="info-label">University</div><div class="info-val">GITAM · Vizag</div></div>
         <div class="info-item"><div class="info-label">Branch</div><div class="info-val">CSE · AI/ML</div></div>
         <div class="info-item"><div class="info-label">Batch</div><div class="info-val">2024 – 2028</div></div>
-        <div class="info-item"><div class="info-label">Location</div><div class="info-val">India 🇮🇳</div></div>
+        <div class="info-item"><div class="info-label">Location</div><div class="info-val">India</div></div>
         <div class="info-item"><div class="info-label">Focus</div><div class="info-val">AI, Game Dev, AR/VR</div></div>
-        <div class="info-item"><div class="info-label">Status</div><div class="info-val" style="color:var(--green)">Open to Collabs ✓</div></div>
+        <div class="info-item"><div class="info-label">Status</div><div class="info-val" style="color:var(--green)">Open to Collabs</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<!-- PASTE THIS SKILLS SECTION INTO YOUR HOMEPAGE index.html -->
-<!-- Place it after your #about section -->
-
 <section id="skills">
   <div class="sec-header reveal">
     <span class="sec-num">02</span>
@@ -82,62 +88,23 @@
     <div class="sec-line"></div>
   </div>
   <div class="skills-bento reveal">
-    <div class="skill-tile wide">
-      <div class="skill-icon">🐍</div>
-      <div class="skill-name">Python</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">☕</div>
-      <div class="skill-name">Java</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">⚙️</div>
-      <div class="skill-name">C</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🌐</div>
-      <div class="skill-name">HTML &amp; CSS</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">⚡</div>
-      <div class="skill-name">JavaScript</div>
-    </div>
-    <div class="skill-tile wide">
-      <div class="skill-icon">🤖</div>
-      <div class="skill-name">AI / ML</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🎮</div>
-      <div class="skill-name">Pygame</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🕹️</div>
-      <div class="skill-name">LibGDX</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🦺</div>
-      <div class="skill-name">Kotlin</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🔗</div>
-      <div class="skill-name">Git &amp; GitHub</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🧠</div>
-      <div class="skill-name">Gemini API</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🗄️</div>
-      <div class="skill-name">SQL</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">🖥️</div>
-      <div class="skill-name">Linux</div>
-    </div>
-    <div class="skill-tile">
-      <div class="skill-icon">📦</div>
-      <div class="skill-name">DSA</div>
-    </div>
+    <div class="skill-tile wide"><div class="skill-name">AI / ML</div></div>
+    <div class="skill-tile"><div class="skill-name">Unity</div></div>
+    <div class="skill-tile"><div class="skill-name">Game Dev</div></div>
+    <div class="skill-tile wide"><div class="skill-name">AR / VR</div></div>
+    <div class="skill-tile wide"><div class="skill-name">Python</div></div>
+    <div class="skill-tile"><div class="skill-name">Java</div></div>
+    <div class="skill-tile"><div class="skill-name">C</div></div>
+    <div class="skill-tile"><div class="skill-name">HTML &amp; CSS</div></div>
+    <div class="skill-tile"><div class="skill-name">JavaScript</div></div>
+    <div class="skill-tile"><div class="skill-name">Pygame</div></div>
+    <div class="skill-tile"><div class="skill-name">LibGDX</div></div>
+    <div class="skill-tile"><div class="skill-name">Kotlin</div></div>
+    <div class="skill-tile"><div class="skill-name">Git &amp; GitHub</div></div>
+    <div class="skill-tile"><div class="skill-name">Gemini API</div></div>
+    <div class="skill-tile"><div class="skill-name">SQL</div></div>
+    <div class="skill-tile"><div class="skill-name">Linux</div></div>
+    <div class="skill-tile"><div class="skill-name">DSA</div></div>
   </div>
 </section>
 
@@ -169,6 +136,11 @@
       <h3>Banking System</h3>
       <p>Dive into C projects built with core data structures and system-level design.</p>
     </a>
+    <a href="projects/unity.html" class="category-card">
+      <span class="category-tag">Unity</span>
+      <h3>Modi Mario</h3>
+      <p>Unity-built political platformer — play as PM Modi, dodge enemies, and reach the finish line.</p>
+    </a>
   </div>
 </section>
 
@@ -185,7 +157,7 @@
     <div class="cd cd-tl"></div><div class="cd cd-tr"></div><div class="cd cd-bl"></div><div class="cd cd-br"></div>
     <div class="feat-img-wrap">
       <img src="sunday_ai_screenshot.png" alt="Sunday AI" onerror="this.style.display='none';document.getElementById('feat-fallback').style.display='flex'">
-      <div id="feat-fallback" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:90px;background:linear-gradient(135deg,rgba(0,245,255,0.05),rgba(123,47,255,0.1))">🤖</div>
+      <div id="feat-fallback" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:90px;background:linear-gradient(135deg,rgba(0,245,255,0.05),rgba(123,47,255,0.1))"></div>
       <div class="feat-overlay"></div>
     </div>
     <div class="feat-body">
@@ -216,10 +188,28 @@
   </div>
 
   <div class="projects-grid">
+    <!-- MODI MARIO -->
+    <div class="project-card reveal">
+      <img src="modi.png" alt="Modi Mario" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="proj-placeholder" style="display:none;background:linear-gradient(135deg,rgba(255,153,0,0.1),rgba(19,136,8,0.07))"></div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag tag-cx">Unity</span>
+          <span class="tag tag-cx">Game Dev</span>
+          <span class="tag tag-java" style="color:#a259ff;border-color:rgba(162,89,255,.3);background:rgba(162,89,255,.05)">C#</span>
+        </div>
+        <div class="project-title">MODI MARIO</div>
+        <p class="project-desc">India's PM goes 8-bit. A Mario-style Unity platformer where you play as Narendra Modi — jumping over Rahul Gandhi enemies, dodging political chaos, and racing across hand-crafted levels to reach Giorgia Meloni at the finish line. Custom sprites, collision logic, and level design built from scratch in Unity.</p>
+        <div class="project-links">
+          <a href="https://github.com/kd-kushaldhoot" target="_blank" class="proj-link">⬡ GitHub</a>
+        </div>
+      </div>
+    </div>
+
     <!-- CHAOS BALL -->
     <div class="project-card reveal">
       <img src="chaos_ball_screenshot.png" alt="Chaos Ball" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-placeholder" style="display:none;background:linear-gradient(135deg,rgba(0,245,255,0.05),rgba(123,47,255,0.05))">🎮</div>
+      <div class="proj-placeholder" style="display:none;background:linear-gradient(135deg,rgba(0,245,255,0.05),rgba(123,47,255,0.05))"></div>
       <div class="project-body">
         <div class="project-tags"><span class="tag tag-py">Python</span><span class="tag tag-cx">Pygame</span><span class="tag tag-cx">Game Dev</span></div>
         <div class="project-title">CHAOS BALL</div>
@@ -235,14 +225,14 @@
     <!-- AQUA AI -->
     <div class="project-card reveal">
       <img src="AQUA_AI.png" alt="AQUA AI" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-placeholder" style="display:none;background:linear-gradient(135deg,rgba(0,188,212,0.07),rgba(0,245,255,0.03))">🌊</div>
+      <div class="proj-placeholder" style="display:none;background:linear-gradient(135deg,rgba(0,188,212,0.07),rgba(0,245,255,0.03))"></div>
       <div class="project-body">
         <div class="project-tags"><span class="tag tag-web">HTML</span><span class="tag tag-py" style="color:#f7df1e;border-color:rgba(247,223,30,.3)">JS</span><span class="tag tag-web" style="color:#264de4;border-color:rgba(38,77,228,.3)">CSS</span></div>
         <div class="project-title">AQUA AI</div>
         <p class="project-desc">A sleek, web-based AI interface crafted with pure HTML, CSS & JavaScript. Clean UX-focused design featuring smooth animations, fully responsive layout, and a polished frontend architecture.</p>
         <div class="project-links">
           <a href="https://github.com/kd071206/AQUA_AI" target="_blank" class="proj-link">⬡ Repo</a>
-          <a href="https://kd071206.github.io/AQUA_AI-/" target="_blank" class="proj-link v">🌐 Live Site</a>
+          <a href="https://kd071206.github.io/AQUA_AI-/" target="_blank" class="proj-link v">Live Site</a>
         </div>
       </div>
     </div>
@@ -250,7 +240,7 @@
     <!-- QR LOGIN -->
     <div class="project-card reveal">
       <img src="qr_system_screenshot.png" alt="QR System" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="proj-placeholder" style="display:none;background:linear-gradient(135deg,rgba(123,47,255,0.07),rgba(255,45,120,0.03))">📲</div>
+      <div class="proj-placeholder" style="display:none;background:linear-gradient(135deg,rgba(123,47,255,0.07),rgba(255,45,120,0.03))"></div>
       <div class="project-body">
         <div class="project-tags"><span class="tag tag-java">Java</span><span class="tag tag-c">ZXing</span><span class="tag tag-cx">Webcam API</span></div>
         <div class="project-title">QR ENTRY / EXIT SYSTEM</div>
@@ -264,7 +254,7 @@
 
     <!-- BANKING SYSTEM -->
     <div class="project-card reveal">
-      <div class="proj-placeholder" style="background:linear-gradient(135deg,rgba(0,255,136,0.05),rgba(0,188,212,0.03))">🏦</div>
+      <div class="proj-placeholder" style="background:linear-gradient(135deg,rgba(0,255,136,0.05),rgba(0,188,212,0.03))"></div>
       <div class="project-body">
         <div class="project-tags"><span class="tag tag-c">C</span><span class="tag tag-ai" style="color:var(--green);border-color:rgba(0,255,136,.3)">Linked List</span><span class="tag tag-c">DSA</span></div>
         <div class="project-title">BANKING SYSTEM</div>
@@ -290,15 +280,15 @@
       <p>Open to collaborations, project ideas, hackathons, and internships. If you've got a cool idea or just want to talk tech — hit me up.</p>
       <div class="contact-items">
         <a href="mailto:kushaldhoot7dec@gmail.com" class="contact-item">
-          <div class="contact-icon">📧</div>
+          <div class="contact-icon">@</div>
           <div><div class="ci-label">Email</div><div class="ci-val">kushaldhoot7dec@gmail.com</div></div>
         </a>
         <a href="https://www.linkedin.com/in/kushal-dhoot-07dec" target="_blank" class="contact-item">
-          <div class="contact-icon">💼</div>
+          <div class="contact-icon">in</div>
           <div><div class="ci-label">LinkedIn</div><div class="ci-val">kushal-dhoot-07dec</div></div>
         </a>
         <a href="https://github.com/kd-kushaldhoot" target="_blank" class="contact-item">
-          <div class="contact-icon">🐙</div>
+          <div class="contact-icon">gh</div>
           <div><div class="ci-label">GitHub</div><div class="ci-val">kd-kushaldhoot</div></div>
         </a>
       </div>
@@ -306,16 +296,16 @@
     <div class="reveal">
       <div class="socials-grid">
         <a href="https://github.com/kd-kushaldhoot" target="_blank" class="social-card gh">
-          <span class="s-icon">🐙</span><span class="s-label">GitHub</span>
+          <span class="s-icon-text">GH</span><span class="s-label">GitHub</span>
         </a>
         <a href="https://www.linkedin.com/in/kushal-dhoot-07dec" target="_blank" class="social-card li">
-          <span class="s-icon">💼</span><span class="s-label">LinkedIn</span>
+          <span class="s-icon-text">IN</span><span class="s-label">LinkedIn</span>
         </a>
         <a href="https://www.youtube.com/channel/UC8zRjKlsGAbe4zjJJ2AUpig" target="_blank" class="social-card yt">
-          <span class="s-icon">▶️</span><span class="s-label">YouTube</span>
+          <span class="s-icon-text">YT</span><span class="s-label">YouTube</span>
         </a>
         <a href="mailto:kushaldhoot7dec@gmail.com" class="social-card em">
-          <span class="s-icon">📧</span><span class="s-label">Email Me</span>
+          <span class="s-icon-text">EMAIL ME</span>
         </a>
       </div>
     </div>
@@ -325,6 +315,7 @@
 <footer>
   <div class="footer-logo">KUSHAL DHOOT</div>
   <div class="footer-copy">© 2025 · B.TECH CSE AI/ML · GITAM</div>
+  <div class="footer-design">Designed & Built by KUSHAL DHOOT</div>
 </footer>
 
 <script src="script.js"></script>

@@ -26,7 +26,7 @@ if(hamburger && mobileMenu){
 }
 
 // TYPEWRITER
-const phrases=["Hey, this is Kushal Dhoot :)","Welcome to my Portfolio!","AI/ML Engineer in the making","Python · Java · Game Dev · Web","Building the future, one commit at a time"];
+const phrases=["Hey, this is Kushal Dhoot :)","Welcome to my Portfolio!","Python · Java · Unity · Game Dev · AR/VR"];
 let pi=0,ci=0,del=false;
 const tw=document.getElementById('typewriter');
 if(tw){
