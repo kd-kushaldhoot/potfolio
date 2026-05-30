@@ -93,6 +93,7 @@ section:first-of-type:not(#hero){padding-top:calc(64px + 60px)}
 .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
 .about-text p{font-size:16px;line-height:1.9;color:var(--text);margin-bottom:18px;font-weight:300}
 .about-text p strong{color:var(--cyan);font-weight:600}
+.about-text .fun-line{font-size:18px;font-weight:800;color:#fff;text-align:center;margin:0 0 26px;letter-spacing:1px;text-shadow:0 0 12px rgba(0,245,255,0.45),0 0 24px rgba(123,47,255,0.15)}
 .about-info{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
 .info-item{background:var(--card);border:1px solid var(--border);padding:16px;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
 .info-label{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
