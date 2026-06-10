@@ -1,0 +1,13 @@
+KUSHAL DHOOT - MEME GREEN-SCREEN VIDEOS INSTRUCTIONS
+
+To make the 'skuba' and 'oiia' terminal commands play their respective videos, please place your video files inside this folder:
+
+1. For the scuba diving cat:
+   - Filename: skuba.mp4
+   - Path: PTT/memes/skuba.mp4
+
+2. For the spinning cat:
+   - Filename: oiia.mp4
+   - Path: PTT/memes/oiia.mp4
+
+The javascript code is equipped with real-time chromakey filters. It automatically filters out standard green screens (removing the background) and makes the cats float and spin transparently over your portfolio!

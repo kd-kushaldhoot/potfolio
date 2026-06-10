@@ -5,11 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kushal Dhoot | Python Projects</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css?v=3.6">
 </head>
 <body>
+
+<div id="canvas-container"></div>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cr"></div>
+
+<!-- HUD OVERLAYS -->
+<div class="hud-scanlines"></div>
+<div class="hud-grid-overlay"></div>
+
 <nav>
   <div class="nav-logo">KD</div>
   <ul class="nav-links">
@@ -19,6 +26,9 @@
     <li><a href="java.html">Java</a></li>
     <li><a href="c.html">C</a></li>
   </ul>
+  <div class="nav-hud-controls">
+    <button class="hud-audio-btn" id="audio-toggle" title="Toggle audio sound effects">// SOUND: OFF</button>
+  </div>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
@@ -76,6 +86,8 @@
     </div>
   </div>
 </section>
-<script src="script-python.js"></script>
+<script src="../three.min.js"></script>
+<script src="../three-bg.js?v=3.6"></script>
+<script src="../script.js?v=3.6"></script>
 </body>
 </html>

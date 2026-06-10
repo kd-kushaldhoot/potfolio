@@ -5,12 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kushal Dhoot | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3.6">
+<script>
+  window.onerror = function(message, source, lineno, colno, error) {
+    const errorMsg = `[JS Error] ${message} at ${source}:${lineno}:${colno}`;
+    console.error(errorMsg);
+    const errDiv = document.createElement('div');
+    errDiv.style.position = 'fixed';
+    errDiv.style.bottom = '10px';
+    errDiv.style.left = '10px';
+    errDiv.style.background = 'rgba(255, 0, 0, 0.9)';
+    errDiv.style.color = '#fff';
+    errDiv.style.padding = '12px 18px';
+    errDiv.style.zIndex = '999999';
+    errDiv.style.fontFamily = 'monospace';
+    errDiv.style.fontSize = '12px';
+    errDiv.style.borderRadius = '4px';
+    errDiv.style.border = '1px solid #ff5f56';
+    errDiv.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.4)';
+    errDiv.textContent = errorMsg;
+    document.body.appendChild(errDiv);
+  };
+</script>
 </head>
 <body>
 
+<div id="canvas-container"></div>
+<canvas id="matrix-canvas"></canvas>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cr"></div>
+
+<!-- HUD OVERLAYS -->
+<div class="hud-grid-overlay"></div>
+<div class="hud-scanlines"></div>
+
+<div class="hud-sidebar-left">
+  <div class="hud-line"></div>
+  <span class="hud-vertical-text">SYSTEM.SYS_DECK_V2.0</span>
+</div>
+<div class="hud-sidebar-right">
+  <span class="hud-vertical-text">CSE.AI_ML.SPECIALIST</span>
+  <div class="hud-line"></div>
+</div>
 
 <nav>
   <div class="nav-logo">KD</div>
@@ -20,6 +56,16 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <div class="nav-hud-controls">
+    <div class="hud-toggle-container">
+      <span class="hud-toggle-label">FUN_MODE</span>
+      <label class="hud-switch">
+        <input type="checkbox" id="log-toggle" checked>
+        <span class="hud-slider"></span>
+      </label>
+    </div>
+    <button class="hud-audio-btn" id="audio-toggle" title="Toggle audio sound effects">// SOUND: OFF</button>
+  </div>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -34,16 +80,36 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-orb"></div>
-  <div class="hero-orb2"></div>
-  <div class="hero-content">
-    <div class="hero-tag"><span>// </span>B.Tech CSE · AI/ML · GITAM University · 2024–2028</div>
-    <h1 class="hero-name" data-text="KUSHAL DHOOT">KUSHAL <span class="accent">DHOOT</span></h1>
-    <div class="typewriter-wrap"><span class="prefix">&gt; </span><span id="typewriter"></span><span class="blink">_</span></div>
-    <p class="hero-desc">I build stuff to make something new/cool and also to learn new things Sunday AI for windows is under my main project right now.</p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="#contact" class="btn-sec">Contact Me</a>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-tag"><span>// </span>B.Tech CSE · AI/ML · GITAM University · 2024–2028</div>
+      <h1 class="hero-name" data-text="KUSHAL DHOOT">KUSHAL <span class="accent">DHOOT</span></h1>
+      <div class="typewriter-wrap"><span class="prefix">&gt; </span><span id="typewriter"></span><span class="blink">_</span></div>
+      <p class="hero-desc">I build stuff to make something new/cool and also to learn new things. Sunday AI for Windows is under active development.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-sec">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-terminal reveal">
+      <div class="term-header">
+        <span class="term-dot"></span>
+        <span class="term-dot"></span>
+        <span class="term-dot"></span>
+        <span class="term-title">guest@dhoot-deck:~</span>
+      </div>
+      <div class="term-body" id="term-logs">
+        <div class="term-row"><span class="term-time">[12:00:00]</span> INITIALIZING CYBERDECK_V2.5...</div>
+        <div class="term-row"><span class="term-time">[12:00:01]</span> LOADING THREEJS CORE BACKDROP...</div>
+        <div class="term-row"><span class="term-time">[12:00:02]</span> SYSTEM INTEGRATION: NOMINAL</div>
+        <div class="term-row"><span class="term-time">[12:00:03]</span> WELCOME AGENT: KUSHAL DHOOT</div>
+        <div class="term-row" style="color:var(--yellow)">// TYPE 'help' FOR INTERACTIVE COMMANDS</div>
+      </div>
+      <div class="term-input-row">
+        <span class="term-prompt">guest@dhoot-deck:~$</span>
+        <input type="text" id="term-input" autocomplete="off" placeholder="type here..." />
+      </div>
     </div>
   </div>
   <div class="hero-stats">
@@ -320,6 +386,12 @@
   <div class="footer-design">Designed & Built by KUSHAL DHOOT</div>
 </footer>
 
-<script src="script.js"></script>
+<!-- CHROMACKEY MEME PLAYER ELEMENTS -->
+<video id="meme-video" style="display:none;" playsinline loop></video>
+<canvas id="meme-canvas" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:9999;pointer-events:none;max-width:80vw;max-height:80vh;display:none;filter:drop-shadow(0 0 30px rgba(0,245,255,0.4));"></canvas>
+
+<script src="three.min.js"></script>
+<script src="three-bg.js?v=3.6"></script>
+<script src="script.js?v=3.6"></script>
 </body>
 </html>
